@@ -13,62 +13,42 @@
   </header>
 
   <main>
-    <section class="products">
-      <div class="product">
-        <img src="images/ring.jpg" alt="Gold Ring" />
-        <h2>Gold Ring</h2>
-        <p>Classic 22K gold ring with intricate design.</p>
-        <a href="https://wa.me/919845005208?text=I'm%20interested%20in%20the%20Gold%20Ring" target="_blank">Order via WhatsApp</a>
-      </div>
+    <!-- Tab Navigation -->
+    <div class="tabs">
+      <button class="tab-button" onclick="showTab('rings')">Rings</button>
+      <button class="tab-button" onclick="showTab('necklaces')">Necklaces</button>
+    </div>
 
-      <div class="product">
-        <img src="images/necklace.jpg" alt="Diamond Necklace" />
-        <h2>Diamond Necklace</h2>
-        <p>Elegant diamond necklace set in white gold.</p>
-        <a href="https://wa.me/919845005208?text=I'm%20interested%20in%20the%20Diamond%20Necklace" target="_blank">Order via WhatsApp</a>
-      </div>
-    </section>
+    <!-- Tab Content -->
+    <div id="rings" class="tab-content">
+      <h2>Gold Ring</h2>
+      <img src="images/ring.jpg" alt="Gold Ring" />
+      <p>Classic 22K gold ring with intricate design.</p>
+      <a href="https://wa.me/919845005208?text=I'm%20interested%20in%20the%20Gold%20Ring" target="_blank">Order via WhatsApp</a>
+    </div>
+
+    <div id="necklaces" class="tab-content" style="display:none;">
+      <h2>Diamond Necklace</h2>
+      <img src="images/necklace.jpg" alt="Diamond Necklace" />
+      <p>Elegant diamond necklace set in white gold.</p>
+      <a href="https://wa.me/919845005208?text=I'm%20interested%20in%20the%20Diamond%20Necklace" target="_blank">Order via WhatsApp</a>
+    </div>
   </main>
 
   <footer>
     <p>&copy; 2025 Nasio Jewellery. All rights reserved.</p>
   </footer>
+
+  <script>
+    function showTab(tabName) {
+      // Hide all tab contents
+      const contents = document.querySelectorAll('.tab-content');
+      contents.forEach(content => content.style.display = 'none');
+
+      // Show the selected tab content
+      document.getElementById(tabName).style.display = 'block';
+    }
+  </script>
 </body>
 </html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nasio Jewellery</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <h1>Nasio Jewellery</h1>
-    <p>Elegant Designs for Every Occasion</p>
-  </header>
 
-  <main>
-    <section class="products">
-      <div class="product">
-        <img src="images/ring.jpg" alt="Gold Ring" />
-        <h2>Gold Ring</h2>
-        <p>Classic 22K gold ring with intricate design.</p>
-        <a href="https://wa.me/919845005208?text=I'm%20interested%20in%20the%20Gold%20Ring" target="_blank">Order via WhatsApp</a>
-      </div>
-
-      <div class="product">
-        <img src="images/necklace.jpg" alt="Diamond Necklace" />
-        <h2>Diamond Necklace</h2>
-        <p>Elegant diamond necklace set in white gold.</p>
-        <a href="https://wa.me/919845005208?text=I'm%20interested%20in%20the%20Diamond%20Necklace" target="_blank">Order via WhatsApp</a>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Nasio Jewellery. All rights reserved.</p>
-  </footer>
-</body>
-</html>
